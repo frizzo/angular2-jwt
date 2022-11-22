@@ -55,8 +55,8 @@ import { Storage } from '@ionic/storage';
 
 export function jwtOptionsFactory(storage) {
   return {
-    tokenGetter: () => {
-      return storage.get('access_token');
+    tokenGetter: async () => {
+      return await storage.get('access_token');
     },
     allowedDomains: ["example.com"]
   }
